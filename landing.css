@@ -15,7 +15,7 @@ body{
 /* Navagition bar */
 .navbar{
     display: block;
-    height: 3vw;
+    height: 4vw;
     position: fixed;
     background-color: #ffffff;
     z-index: 4;
@@ -30,7 +30,7 @@ body{
 .navbar>ul>a>li{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 0vw 1vw;
-    font-size: 2vw;
+    font-size: 2.5vw;
     display: inline-block;
     transition: all ease 1s;
 
@@ -48,6 +48,7 @@ body{
 /* Hamburger icon  */
 .hmb{
     position: fixed;
+    top: 1vh;
     left: 2vw;
     display: none;
 }
@@ -57,15 +58,15 @@ body{
 /* Navigation Button */
 .navbut{
     display: none;
-    width: 10vw;
-    height: 30vw;
+    width: 25vw;
+    height: 35vh;
     padding: 1vw 1vw;
     position: fixed;
     left: 0vw;
     top: 0vw;
     background-color: #ffffff;
     z-index: 4;
-    border-radius: 0px 0px 25px 25px;
+    border-radius:0 0 5vw 2vw;
 }
 .navbut>ul{
     list-style: none;
@@ -75,7 +76,7 @@ body{
 .navbut>ul>a>li{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     padding: 1vw 1vw;
-    font-size: 2vw;
+    font-size: 4vw;
     transition: all ease 0.5s;
 
 }
@@ -85,11 +86,11 @@ body{
 }
 .navbut>ul>a>li:hover{
     font-weight: bolder;
-    font-size: 2.3vw;
+    font-size: 4.2vw;
     color: #de9b1f;
 }
 /* Change Between Navbar and Navbut */
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     .navbar{
         display: none;
     }
@@ -181,7 +182,7 @@ body{
     top: 18vh;
     left: 22vw;
     height: 20vh;
-    width: 50vw;
+    width: 55vw;
     transition: all ease;
     border-radius: 50px;
     z-index: 4;
@@ -207,7 +208,7 @@ body{
 
     height: 14vw;
 }
-#close1,#close2,#close3{
+.close,#close1,#close2,#close3{
     color: red;
     position: fixed;
     font-size: 5vw;

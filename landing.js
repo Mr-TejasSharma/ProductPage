@@ -4,6 +4,7 @@ const productsList = ['Chairs', 'Tables', 'Couches', 'Beds', 'Almirahs', 'Sofas'
 const emailInput = document.querySelector(".email");
 const contactForm = document.querySelector(".contact_form");
 const Form = document.querySelector(".form");
+const Close=document.querySelector(".close")
 const Close1=document.querySelector("#close1");
 const Close2=document.querySelector("#close2");
 const Close3=document.querySelector("#close3");
@@ -39,7 +40,9 @@ function isValidEmail(email) {
     const emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
     return emailPattern.test(email);
 }
-
+Close.addEventListener('click',function(){
+  submit.style.display="none";
+});
 Close1.addEventListener('click',function(){
   PriceChair.style.display="none";
 });
