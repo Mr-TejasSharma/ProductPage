@@ -9,7 +9,8 @@ body{
 .logo{
     position: fixed;
     height: 7vw;
-    z-index: 4;
+    right: 2vw;
+    z-index: 5;
 }
 /* Navagition bar */
 .navbar{
@@ -17,9 +18,9 @@ body{
     height: 3vw;
     position: fixed;
     background-color: #ffffff;
+    z-index: 4;
 }
 .navbar>ul{
-    margin-left: 5vw;
     width: 100vw;
     height: 3vw;
     list-style: none;
@@ -31,10 +32,11 @@ body{
     padding: 0vw 1vw;
     font-size: 2vw;
     display: inline-block;
-    transition: all ease 0.5s;
+    transition: all ease 1s;
 
 }
 .navbar>ul>a{
+    padding: 2vw;
     text-decoration: none;
     color: #db9d21;
 }
@@ -46,7 +48,7 @@ body{
 /* Hamburger icon  */
 .hmb{
     position: fixed;
-    right: 2vw;
+    left: 2vw;
     display: none;
 }
 .hmb>img{
@@ -59,7 +61,8 @@ body{
     height: 30vw;
     padding: 1vw 1vw;
     position: fixed;
-    right: 0vw;
+    left: 0vw;
+    top: 0vw;
     background-color: #ffffff;
     z-index: 4;
     border-radius: 0px 0px 25px 25px;
@@ -77,14 +80,13 @@ body{
 
 }
 .navbut>ul>a{
-    mix-blend-mode:revert;
     text-decoration: none;
-    color: burlywood;
+    color: #e2a554;
 }
 .navbut>ul>a>li:hover{
     font-weight: bolder;
     font-size: 2.3vw;
-    color: #e3a93e;
+    color: #de9b1f;
 }
 /* Change Between Navbar and Navbut */
 @media screen and (max-width: 800px) {
@@ -99,12 +101,15 @@ body{
     }
     .navbut:hover{
         display: block;
+    } 
+    .pricechair,.pricetable,.pricesofa{
+        font-size: 8vw;
     }
-    
 }
 /* Fixed icon for help */
 .contact{
     height: 15vh;
+    z-index: 2;
 }
 .icon{
     position: fixed;
@@ -118,11 +123,11 @@ body{
     display: none;
     background-image: url("Assets/form-bg.avif");
     background-size: cover;
-    height: 38vh;
-    width: 50vw;
+    height: auto;
+    width: 45vw;
     position: fixed;
-    right: 100px;
-    bottom: 160px;
+    right: 10vh;
+    bottom: 14vh;
     padding: 3% 5%;
     border-radius: 50px 50px 0px 50px;
     box-shadow: 0px 0px 10px 10px rgb(235, 159, 59);
@@ -130,16 +135,16 @@ body{
 
 }
 .contact_form>input,.contact_form>textarea,.contact_form>button{
-    font-size: 35px;
+    font-size: 3vh;
     padding-left:2%;
     display: flex;
-    height: 10%;
+    height: 6vh;
     width: 100%;
     border-radius: 50px;
     background-color: rgb(250, 222, 185);
 }
 .contact_form>textarea{
-    font-size: 25px;
+    font-size: 3vh;
     padding-top: 2%;
     height: 13vh;
     resize: none;
@@ -147,6 +152,8 @@ body{
 .contact_form>button{
     width: auto;
     margin-left:35%;
+    padding: 0.3vh;
+    height: 4vh;
     background-color: rgb(206, 163, 34);
     cursor: pointer;
 }
@@ -161,16 +168,131 @@ body{
 .form:hover {
     display: block;
 }
+/*submittion Status*/
+.submitted{
+    display: none;
+    padding:5vw;
+    text-align: center;
+    justify-content: center;
+    font-size: 5vw;
+    color: #ffffff;
+    position: fixed;
+    background-image: linear-gradient(to bottom,rgb(72, 231, 72),green);
+    top: 18vh;
+    left: 22vw;
+    height: 20vh;
+    width: 50vw;
+    transition: all ease;
+    border-radius: 50px;
+    z-index: 4;
+}
+
+
+/*Price page*/
+.pricechair,.pricetable,.pricesofa{
+    display: none;
+    justify-content: center;
+    border-radius: 2vw;
+    background-color: #dbaa55;
+    padding: 2vw 1vw;
+    position: fixed;
+    top: 18vh;
+    left: 15vw;
+    height:auto;
+    width: 70vw;
+    font-size: 3vw;
+    z-index: 4;
+}
+.pricechair>img,.pricetable>img,.pricesofa>img{
+
+    height: 14vw;
+}
+#close1,#close2,#close3{
+    color: red;
+    position: fixed;
+    font-size: 5vw;
+    top:17vh;
+    right: 14vw;
+    cursor: pointer;
+}
+
+@media screen and (min-width : 1400px){
+    .pricechair,.pricetable,.pricesofa{
+        font-size: 2vw;
+    }
+    
+}
 /* Start of first page */
 .land{
-    background-color: rgb(227, 232, 237);
+    background-color: #e3e8ed;
     overflow: hidden;
 }
 .land>img{
     width: 100vw;
 }
 .land>span{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 10vw;
     position: relative;
-    top: -45vw;
+    top: -47vw;
+    left: 5vw;
+}
+.land>span>span,.details>span,.description>span{
+    color: #977232;
+}
+.land>.details,.land>.description{
+    font-size: 5vw;
+    position: relative;
+    top: -20vw;
+}
+.land>.details{
+    left: 5vw;
+}
+.land>.description{
+    font-size: 3vw;
+    right: -30vw;
+}
+
+/*Scroll Effect*/
+::-webkit-scrollbar{
+    display: none;
+}
+
+.scroll{
+        background-color:#e3e8ed;
+        width: 100vw;
+        overflow:auto;
+        white-space: nowrap;
+}
+.scroll>a{
+    display:inline-block;
+}
+.scroll>a>img{
+    height: 30vw;
+}
+.scroll>a:hover{
+    border-radius: 50%;
+    background-size: cover;
+    transition: ease 1s;
+}
+.secondpage>.scroll>a:hover{
+    background-image: url("Assets/wall.png");
+}
+.thirdpage>.scroll>a:hover{
+    background-image: url("Assets/floor.png");
+}
+.fourthpage>.scroll>a:hover{
+    background-image: url("Assets/room.png");
+    border-radius: 100px;
+}
+.secondpage,
+.thirdpage,
+.fourthpage{
+    background-color: #e3e8ed;
+}
+.secondpage>span,
+.thirdpage>span,
+.fourthpage>span{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10vw;
 }
